@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DRGdistributorsDataSet2" targetNamespace="http://tempuri.org/DRGdistributorsDataSet2.xsd" xmlns:mstns="http://tempuri.org/DRGdistributorsDataSet2.xsd" xmlns="http://tempuri.org/DRGdistributorsDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DRGdistributorsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DRGdistributorsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DRGDistributorNew.Properties.Settings.GlobalReference.Default.DRGdistributorsConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="salesWeeklyTableAdapter" GeneratorDataComponentClassName="salesWeeklyTableAdapter" Name="salesWeekly" UserDataComponentName="salesWeeklyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DRGdistributorsConnectionString (Settings)" DbObjectName="DRGdistributors.dbo.salesWeekly" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT weekNum FROM dbo.salesWeekly</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="weekNum" DataSetColumn="weekNum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DRGdistributorsDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="DRGdistributorsDataSet2" msprop:Generator_DataSetName="DRGdistributorsDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="salesWeekly" msprop:Generator_RowEvHandlerName="salesWeeklyRowChangeEventHandler" msprop:Generator_RowDeletedName="salesWeeklyRowDeleted" msprop:Generator_RowDeletingName="salesWeeklyRowDeleting" msprop:Generator_RowEvArgName="salesWeeklyRowChangeEvent" msprop:Generator_TablePropName="salesWeekly" msprop:Generator_RowChangedName="salesWeeklyRowChanged" msprop:Generator_RowChangingName="salesWeeklyRowChanging" msprop:Generator_TableClassName="salesWeeklyDataTable" msprop:Generator_RowClassName="salesWeeklyRow" msprop:Generator_TableVarName="tablesalesWeekly" msprop:Generator_UserTableName="salesWeekly">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="weekNum" msprop:Generator_ColumnPropNameInRow="weekNum" msprop:Generator_ColumnPropNameInTable="weekNumColumn" msprop:Generator_ColumnVarNameInTable="columnweekNum" msprop:Generator_UserColumnName="weekNum" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
