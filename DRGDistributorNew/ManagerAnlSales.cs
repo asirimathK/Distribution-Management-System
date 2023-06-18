@@ -19,6 +19,7 @@ namespace DRGDistributorNew
         {
             InitializeComponent();
         }
+        //Connection String
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-AJA1KQB\SQLEXPRESS;Initial Catalog=DRGdistributors;Integrated Security=True");
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
@@ -119,6 +120,8 @@ namespace DRGDistributorNew
             label3.Text = Convert.ToString(com1.ExecuteScalar());
             conn.Close();
         }
+
+        //Method to predic the sales using a basic function
          void Predict()
         {
             double predWeeklySales, predDailySales, predWeeklyItems, predDailyItems;
@@ -173,7 +176,7 @@ namespace DRGDistributorNew
         private void button4_Click(object sender, EventArgs e)
         {
 
-            //string querry = "select weeknum,dsrID, salesValue from salesWeekly;";
+            //Viewing weekly sales according to their respective weeks
             string weekNum = comboBox1.Text;
             if (weekNum == "1")
             {
@@ -276,18 +279,7 @@ namespace DRGDistributorNew
                 MessageBox.Show("Please select a week to proceed.");
             }
 
-            /*DataTable dt = new DataTable();
-            conn.Open();
-            string querry = "select dsrID, salesValue from salesWeekly where weeknum = 2;";
-            SqlDataAdapter da = new SqlDataAdapter(querry,conn);
-            da.Fill(dt);
-            AnsSales.DataSource = dt;
-            AnsSales.DataBind();
-           
-
-            AnsSales.Series["Sales"].XValueMember = "dsrID";
-            AnsSales.Series["Sales"].YValueMembers = "salesValue";
-            conn.Close();*/
+            
         }
 
         private void ManagerAnlSales_Load(object sender, EventArgs e)
