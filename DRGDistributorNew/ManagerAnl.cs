@@ -18,7 +18,10 @@ namespace DRGDistributorNew
         {
             InitializeComponent();
         }
+        //connection string
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-AJA1KQB\SQLEXPRESS;Initial Catalog=DRGdistributors;Integrated Security=True");
+
+        //Method to fill the bar chart
         void FillChart()
         {
             DataTable dt = new DataTable();
@@ -36,6 +39,7 @@ namespace DRGDistributorNew
             
 
         }
+        //Method to fill the pie chart
          void FillChart2()
         {
             DataTable dt = new DataTable();
@@ -55,6 +59,7 @@ namespace DRGDistributorNew
 
         }
         
+        //Method to view the best performing DSR
         void BestPerformingDSR()
         {
             string querry = "select dsrName, sum(totSalesvalue) as IndividualSales FROM DRGsales group by dsrName order by IndividualSales desc;";
@@ -66,6 +71,7 @@ namespace DRGDistributorNew
             conn.Close();
         }
 
+        //Method to view the best selling product
         void BestSellingPrd()
         {
             string querry = "select top 3 * from productSales order by salesQty desc;";
